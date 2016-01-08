@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>在iOS应用内打开PDF文件 - Zephan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="http://shitoudev.github.io/css/combined-min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://shitoudev.github.io" class="site-title">Zephan</a>
+      <nav class="site-nav right">
+      <a href="http://shitoudev.github.io/about/">About</a>
+<a href="http://shitoudev.github.io/tags">Tags</a>
+
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">在iOS应用内打开PDF文件</h1>
+        <span class="post-meta">Jan 7, 2016, 5:13pm by zephan</span><br>
+        
+      </div>
+
+      <article class="post-content">
+      <p>&emsp;&emsp;作者：Arthur Knopper <a href="http://www.ioscreator.com/tutorials/open-pdf-tutorial">原文链接</a></p>
+
+<p>&emsp;&emsp;在iOS应用内显示PDF文件内容可以使用Web View来解决，这篇文章将从本地读取PDF文件并显示到屏幕上。教程的代码使用Xcode7.1、iOS9编译运行。</p>
+
+<p>&emsp;&emsp;打开Xcode新建一个新的名字为“IOS9OpenPDFTutorial”的项目，语言选择Swift，设备选择iPhone，其他随意。</p>
+
+<p><img src="http://shitoudev.github.io/images/openpdf/download.png" alt="image" /></p>
+
+<p>&emsp;&emsp;之后打开Main.storyboard，添加一个名字为“Open PDF”的按钮。再按住Ctrl键的同时点击按钮并拖动至父视图的顶部，松开点击（Ctrl键不松开）在出来的界面中选择“Vertical Spacing to Top Layout Guide” 和 “Center Horizontally in Container”选项。</p>
+
+<p><img src="http://shitoudev.github.io/images/openpdf/download_5.png" alt="image" /></p>
+
+<p>界面看起来是这个样子。</p>
+
+<p><img src="http://shitoudev.github.io/images/openpdf/download_2.png" alt="image" /></p>
+
+<p>为按钮链接点击事件到 ViewController.swift</p>
+
+<p><img src="http://shitoudev.github.io/images/openpdf/download_3.png" alt="image" /></p>
+
+<p><a href="http://www.ioscreator.com/s/Alice_In_Wonderland.pdf">这里有个PDF</a>，下载之后加入到项目里面，然后下面是点击之后实现打开PDF的代码。</p>
+
+<pre><code>@IBAction func openPDF(sender: AnyObject) {
+    let url = NSBundle.mainBundle().URLForResource(&quot;Alice_In_Wonderland&quot;, withExtension: &quot;pdf&quot;)
+
+    if let url = url {
+      let webView = UIWebView(frame: self.view.frame)
+      let urlRequest = NSURLRequest(URL: url)
+      webView.loadRequest(urlRequest)
+
+      view.addSubview(webView)
+    }
+  }
+</code></pre>
+
+<p>&emsp;&emsp;这段代码从本地加载PDF文件得到地址，然后通过Web View加载。运行之后点击 “Open PDF” 按钮就可以看到PDF文件的内容了。</p>
+
+<p><img src="http://shitoudev.github.io/images/openpdf/download_4.png" alt="image" /></p>
+
+<p>&emsp;&emsp;你可以从<a href="https://github.com/ioscreator/ioscreator">这里(github)</a>下载到“IOS9OpenPDFTutorial”的源代码（点击链接之后Ctrl+F搜索“IOS9OpenPDFTutorial”）</p>
+
+<p><code>Zephan：这也要写篇文章出来，其实就是用WebView加载PDF文件就完事了，不过我挺佩服这些老外的专注与认真的，这也是我的第一篇英文翻译，没想到我也能翻译英文了，没想到、没想到、没想到啊。</code></p>
+
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+            
+            <a href="http://shitoudev.github.io/tags/pdf">pdf</a>
+        
+            ,&nbsp;
+            <a href="http://shitoudev.github.io/tags/iOS">iOS</a>
+        
+      </p>
+
+      
+<div id="disqus_thread">
+  <script type="text/javascript">
+     var disqus_shortname = "zephan";
+     var disqus_identifier = "\/post\/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6\/";
+
+     (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+  </script>
+</div>
+
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+
+<a class="fa fa-twitter" href="https://twitter.com/shitoudev"></a>
+
+
+<a class="fa fa-github" href="https://github.com/shitoudev"></a>
+
+<a class="fa fa-rss" href="http://shitoudev.github.io/index.xml"></a>
+</nav>
+
+          <small>
+            Zephan Lau<br>
+            Copyright &#169; 2015<br>
+            Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="http://shitoudev.github.io/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+
+</body>
+</html>
+

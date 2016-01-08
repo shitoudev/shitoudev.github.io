@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Pdf on Zephan </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://shitoudev.github.io/tags/pdf/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Thu, 07 Jan 2016 17:13:17 CST</updated>
+    
+    <item>
+      <title>在iOS应用内打开PDF文件</title>
+      <link>http://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Thu, 07 Jan 2016 17:13:17 CST</pubDate>
+      
+      <guid>http://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;p&gt;&amp;emsp;&amp;emsp;作者：Arthur Knopper &lt;a href=&#34;http://www.ioscreator.com/tutorials/open-pdf-tutorial&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;在iOS应用内显示PDF文件内容可以使用Web View来解决，这篇文章将从本地读取PDF文件并显示到屏幕上。教程的代码使用Xcode7.1、iOS9编译运行。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;打开Xcode新建一个新的名字为“IOS9OpenPDFTutorial”的项目，语言选择Swift，设备选择iPhone，其他随意。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://shitoudev.github.io/images/openpdf/download.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
+
