@@ -51,6 +51,40 @@
                     
                         
                             
+                                <div class="post">
+  <a class="post-link" href="http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/">
+  <p class="post-meta left">Jan 12, 2016</p>
+  
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Swift Magic: Public Getter, Private Setter </h3>
+  </a>
+  <p class="post-summary"><p>作者：Natasha The Robot <a href="https://www.natashatherobot.com/swift-magic-public-getter-private-setter/">原文链接</a></p>
+
+<p>&emsp;&emsp;在我的这篇 <a href="https://www.natashatherobot.com/swift-dependency-injection-with-a-custom-initializer/">Constructor Injection</a> blog中，我写了一个结构体的例子，它有一个属性，属性可以从外部读取，但是写权限只能在内部，之前的代码看起来是这样的：</p>
+
+<pre><code>struct Counter {
+    // `count` here has to be a var 
+    // but I never want to set the `count` externally, 
+    // so I made it private
+    private var count: Int
+
+    // so this is the only way to access the count externally
+    func getCount() {
+        return count
+    }
+}
+</code></pre>
+</p>
+  
+  <div class="read-more-link">
+    <a href="http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/">Read More…</a>
+  </div>
+</div>
+
+
+                            
+                        
+                            
                         
                             
                                 <div class="post">

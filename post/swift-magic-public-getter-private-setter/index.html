@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Swift Magic: Public Getter, Private Setter - Zephan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="http://shitoudev.github.io/css/combined-min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://shitoudev.github.io" class="site-title">Zephan</a>
+      <nav class="site-nav right">
+      <a href="http://shitoudev.github.io/about/">About</a>
+<a href="http://shitoudev.github.io/tags">Tags</a>
+
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Swift Magic: Public Getter, Private Setter</h1>
+        <span class="post-meta">Jan 12, 2016, 11:13am by </span><br>
+        
+      </div>
+
+      <article class="post-content">
+      <p>作者：Natasha The Robot <a href="https://www.natashatherobot.com/swift-magic-public-getter-private-setter/">原文链接</a></p>
+
+<p>&emsp;&emsp;在我的这篇 <a href="https://www.natashatherobot.com/swift-dependency-injection-with-a-custom-initializer/">Constructor Injection</a> blog中，我写了一个结构体的例子，它有一个属性，属性可以从外部读取，但是写权限只能在内部，之前的代码看起来是这样的：</p>
+
+<pre><code>struct Counter {
+    // `count` here has to be a var 
+    // but I never want to set the `count` externally, 
+    // so I made it private
+    private var count: Int
+
+    // so this is the only way to access the count externally
+    func getCount() {
+        return count
+    }
+}
+</code></pre>
+
+<p>&emsp;&emsp;这个写法我不是很满意，但是当时这是我能想到的唯一方式来这样来做。幸运的是，有一个更好的方法！</p>
+
+<p><a href="https://twitter.com/mipstian/status/685489964403003393">@mipstian</a> 告诉我，可以只指定写权限为私有，像这样：</p>
+
+<pre><code>struct Counter {
+    // I specify that only the setter is private!
+    private(set) var count: Int
+}
+</code></pre>
+
+<p>&emsp;&emsp;在我的例子模块中，Counter结构体是“public”（其实是internal），这样读取就没问题了。如果你需要写SDK，你可以显示的指定 <code>getter</code> 是公开的，<code>setter</code> 是私有的，像这样：</p>
+
+<pre><code>public struct Counter {
+    // I specify that only the setter is private!
+    public private(set) var count: Int
+}
+</code></pre>
+
+<p>&emsp;&emsp;不知道我怎么错过了这个写法（我想这是因为我倾向于更多的可能），但是很高兴在swift中找到这么优雅的方式，我甚至还不知道这样的方式。</p>
+
+<p><code>Zephan: 尝试的第二篇翻译，水平有限，只能翻译比较短的，还要加油啊！</code></p>
+
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+            
+            <a href="http://shitoudev.github.io/tags/swift">swift</a>
+        
+      </p>
+
+      
+<div id="disqus_thread">
+  <script type="text/javascript">
+     var disqus_shortname = "zephan";
+     var disqus_identifier = "\/post\/swift-magic-public-getter-private-setter\/";
+
+     (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+  </script>
+</div>
+
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+
+<a class="fa fa-twitter" href="https://twitter.com/shitoudev"></a>
+
+
+<a class="fa fa-github" href="https://github.com/shitoudev"></a>
+
+<a class="fa fa-rss" href="http://shitoudev.github.io/index.xml"></a>
+</nav>
+
+          <small>
+            Zephan Lau<br>
+            Copyright &#169; 2015<br>
+            Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="http://shitoudev.github.io/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+
+</body>
+</html>
+
