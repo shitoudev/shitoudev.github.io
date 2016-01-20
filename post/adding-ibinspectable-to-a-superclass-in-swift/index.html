@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>在 Swift 中的父类里面使用 IBInspectable 属性 - Zephan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="http://shitoudev.github.io/css/combined-min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://shitoudev.github.io" class="site-title">Zephan</a>
+      <nav class="site-nav right">
+      <a href="http://shitoudev.github.io/about/">About</a>
+<a href="http://shitoudev.github.io/tags">Tags</a>
+
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">在 Swift 中的父类里面使用 IBInspectable 属性</h1>
+        <span class="post-meta">Jan 20, 2016, 12:28pm by </span><br>
+        
+      </div>
+
+      <article class="post-content">
+      <p>作者：Jameson Quave <a href="http://jamesonquave.com/blog/adding-ibinspectable-to-a-superclass-in-swift/">原文链接</a></p>
+
+<p>&emsp;&emsp;一个非常有用的功能就是在代码里面添加 IBInspectable 属性的背景图片。在一个娱乐类的应用里面，我写了一个可设计的 Cell，代码如下：</p>
+
+<pre><code>@IBDesignable
+class TrailerCollectionViewCell: MediaCollectionViewCell {
+    @IBOutlet weak var lengthLabel: UILabel!
+    @IBInspectable weak var bgImage: UIImage! {
+        didSet {
+            imgView.frame = self.bounds
+            self.addSubview(imgView)
+            imgView.image = bgImage
+            imgView.contentMode  = UIViewContentMode.Center
+            self.sendSubviewToBack(imgView)
+        }
+    }
+}
+</code></pre>
+
+<p>&emsp;&emsp;这个代码的好处就是我可以很容易的在 Storyboard 里面去设置背景图片。因为背景图片的属性直接显示在 Storyboard 里，所以就很容易去设置 “播放” 的图形。</p>
+
+<p><img src="http://shitoudev.github.io/images/post/ibinspectable.png" alt="image" /></p>
+
+<p>&emsp;&emsp;注意: Storyboard 的 inspector 里面添加了 “Bg Image”。当你修改背景图片的时候 bgImage 代码里面的 didSet 代码块就会触发并在 Xcode 里面更新背景图片相关的视图。</p>
+
+<p>&emsp;&emsp;还有个麻烦的问题是我有另外两个 CollectionViewCell 的子类也需要这样的功能。这样，我用三个 Class 都继承自一个父类来实现：</p>
+
+<pre><code>import Foundation
+import UIKit
+
+class MediaCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    var imgView = UIImageView()
+    @IBInspectable weak var bgImage: UIImage! {
+        didSet {
+            imgView.frame = self.bounds
+            self.addSubview(imgView)
+            imgView.image = bgImage
+            imgView.contentMode  = UIViewContentMode.Center
+            self.sendSubviewToBack(imgView)
+        }
+    }
+}
+
+class TrailerCollectionViewCell: MediaCollectionViewCell {
+    @IBOutlet weak var lengthLabel: UILabel!
+}
+
+class ReviewCollectionViewCell: MediaCollectionViewCell {
+    @IBOutlet weak var ratingLabel: UILabel!
+}
+
+class PlaythroughCollectionViewCell: MediaCollectionViewCell {
+    @IBOutlet weak var lengthLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+}
+</code></pre>
+
+<p><del><strong>但是，这样却不行</strong></del>（<a href="#zephan">Zephan</a>）</p>
+
+<p>这样的问题是：这个 Bg image 字段在 Storyboard 里面不显示了！</p>
+
+<p>我花了些时间来排查这个问题，解决方法就是在子类里面重写 bgImage 变量，但是不需要去重新实现 didSet 里面的代码。</p>
+
+<p>修复技巧是加上这一行：</p>
+
+<pre><code>@IBInspectable override var bgImage: UIImage! { didSet {} }
+</code></pre>
+
+<p>完成之后代码会是这个样子：</p>
+
+<pre><code>import Foundation
+import UIKit
+
+class MediaCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    var imgView = UIImageView()
+    @IBInspectable weak var bgImage: UIImage! {
+        didSet {
+            imgView.frame = self.bounds
+            self.addSubview(imgView)
+            imgView.image = bgImage
+            imgView.contentMode  = UIViewContentMode.Center
+            self.sendSubviewToBack(imgView)
+        }
+    }
+}
+
+class TrailerCollectionViewCell: MediaCollectionViewCell {
+    @IBOutlet weak var lengthLabel: UILabel!
+    @IBInspectable override var bgImage: UIImage! { didSet {} }
+}
+
+class ReviewCollectionViewCell: MediaCollectionViewCell {
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBInspectable override var bgImage: UIImage! { didSet {} }
+}
+
+class PlaythroughCollectionViewCell: MediaCollectionViewCell {
+    @IBOutlet weak var lengthLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBInspectable override var bgImage: UIImage! { didSet {} }
+}
+</code></pre>
+
+<p><strong><span id="zephan">Zephan：我自己通过 Xcode 7.2，子类继承自父类中的 IBInspectable 属性会在 Xcode 中显示(可能作者当时遇到的 Bug )，所以后面这段代码可以不需要，我是为了翻译，请大家注意了！</span></strong></p>
+
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+            
+            <a href="http://shitoudev.github.io/tags/swift">swift</a>
+        
+            ,&nbsp;
+            <a href="http://shitoudev.github.io/tags/IBInspectable">IBInspectable</a>
+        
+      </p>
+
+      
+<div id="disqus_thread">
+  <script type="text/javascript">
+     var disqus_shortname = "zephan";
+     var disqus_identifier = "\/post\/adding-ibinspectable-to-a-superclass-in-swift\/";
+
+     (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+  </script>
+</div>
+
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+
+<a class="fa fa-twitter" href="https://twitter.com/shitoudev"></a>
+
+
+<a class="fa fa-github" href="https://github.com/shitoudev"></a>
+
+<a class="fa fa-rss" href="http://shitoudev.github.io/index.xml"></a>
+</nav>
+
+          <small>
+            Zephan<br>
+            Copyright &#169; 2015<br>
+            Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="http://shitoudev.github.io/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+
+</body>
+</html>
+

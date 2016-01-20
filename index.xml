@@ -7,7 +7,50 @@
     <language>en-us</language>
     
     
-    <updated>Tue, 12 Jan 2016 11:13:59 CST</updated>
+    <updated>Wed, 20 Jan 2016 17:09:20 CST</updated>
+    
+    <item>
+      <title>Network Link Conditioner</title>
+      <link>http://shitoudev.github.io/post/network-link-conditioner/</link>
+      <pubDate>Wed, 20 Jan 2016 17:09:20 CST</pubDate>
+      
+      <guid>http://shitoudev.github.io/post/network-link-conditioner/</guid>
+      <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/network-link-conditioner/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;在这篇文章里，我们将讨论通过使用 Network Link Conditioner 来模拟网络条件不好的情况。&lt;/p&gt;
+
+&lt;h5 id=&#34;糟糕的网络链接:2fa8e3941c8e72e78934040f1654da1f&#34;&gt;糟糕的网络链接&lt;/h5&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;iOS应用的运行环境相对于桌面计算机软件的运行环境要艰难的多，你只有有限的内存和CPU资源，更糟的是网络链接也不稳定。我们不仅在家里会使用应用，在火车上也会，当我们在咖啡店里面使用的时候，会有其他很多的手机应用都依赖一个网络，所以提供良好的用户体验是至关重要的，即使是在糟糕的网络环境下。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>在 Swift 中的父类里面使用 IBInspectable 属性</title>
+      <link>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
+      <pubDate>Wed, 20 Jan 2016 12:28:30 CST</pubDate>
+      
+      <guid>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
+      <description>&lt;p&gt;作者：Jameson Quave &lt;a href=&#34;http://jamesonquave.com/blog/adding-ibinspectable-to-a-superclass-in-swift/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;一个非常有用的功能就是在代码里面添加 IBInspectable 属性的背景图片。在一个娱乐类的应用里面，我写了一个可设计的 Cell，代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@IBDesignable
+class TrailerCollectionViewCell: MediaCollectionViewCell {
+    @IBOutlet weak var lengthLabel: UILabel!
+    @IBInspectable weak var bgImage: UIImage! {
+        didSet {
+            imgView.frame = self.bounds
+            self.addSubview(imgView)
+            imgView.image = bgImage
+            imgView.contentMode  = UIViewContentMode.Center
+            self.sendSubviewToBack(imgView)
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Swift Magic: Public Getter, Private Setter</title>
