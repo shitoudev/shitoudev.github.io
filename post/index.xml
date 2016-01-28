@@ -7,7 +7,26 @@
     <language>en-us</language>
     
     
-    <updated>Wed, 20 Jan 2016 17:09:20 CST</updated>
+    <updated>Thu, 28 Jan 2016 12:37:22 CST</updated>
+    
+    <item>
+      <title>如何在一个iOS项目中使用 Objective-C 和 Swift</title>
+      <link>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
+      <pubDate>Thu, 28 Jan 2016 12:37:22 CST</pubDate>
+      
+      <guid>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
+      <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/swift-and-objective-c-interoperability/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Objective-C 和 Swift 能很好的交互，所以在同一个项目中可以很容易的同时使用两者。&lt;/p&gt;
+
+&lt;h4 id=&#34;在-swift-文件中使用-objective-c-写的代码:e0b5762b2f2ffeaad5924c2f723e02a2&#34;&gt;在 Swift 文件中使用 Objective-C 写的代码&lt;/h4&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;你可以在一个我们称它为 &lt;code&gt;bridging-header&lt;/code&gt; 文件里面导入 Objective-C 文件。Xcode 会把这些（Objc 文件）转换成 Swift 可用，后面使用起来就感觉和 Swift 一样了。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;创建 &lt;code&gt;bridging-header&lt;/code&gt; 文件很容易，新建 Objective-C 类的时候，如果你的项目里面还没有 &lt;code&gt;bridging-header&lt;/code&gt; 文件，Xcode 会提示你来新建（译注：确认之后建立的文件名是：项目名-Bridging-Header.h）。当然你可以选择不创建而自己手动来建立，直接新建 Objective-C 头文件，取名：Bridging-Header.h（译注：你也可以另外取个），然后定位到 “Build Settings”
+ 里面的 “Swift Compiler – Code generation” 设置项，把 “Objective-C Bridging Header” 设置成刚才的文件名。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Network Link Conditioner</title>
