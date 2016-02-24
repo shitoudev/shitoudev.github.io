@@ -7,7 +7,28 @@
     <language>en-us</language>
     
     
-    <updated>Thu, 07 Jan 2016 17:13:17 CST</updated>
+    <updated>Wed, 24 Feb 2016 16:28:18 CST</updated>
+    
+    <item>
+      <title>2016年全球与iOS开发者相关的会议</title>
+      <link>http://shitoudev.github.io/post/ios-developer-conferences-in-2016/</link>
+      <pubDate>Wed, 24 Feb 2016 16:28:18 CST</pubDate>
+      
+      <guid>http://shitoudev.github.io/post/ios-developer-conferences-in-2016/</guid>
+      <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/ios-developer-conferences-in-2016/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;作为一个iOS开发者你应该去参加一些开发者大会。这是个学习新技术和结识其他开发者一个很好的机会。此外在大会中沟通交流也能锻炼自己。下面是2016年iOS开发者相关的会议列表。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;3月:9806122409fcd1f9295a6fd86e11937c&#34;&gt;3月&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3月2日 - 4日：&lt;a href=&#34;http://www.tryswiftconf.com/en&#34;&gt;try! Swift&lt;/a&gt;，日本，东京&lt;/li&gt;
+&lt;li&gt;3月11日 - 12日：&lt;a href=&#34;http://www.rwdevcon.com/&#34;&gt;RWDevCon&lt;/a&gt; 美国，亚历山大&lt;/li&gt;
+&lt;li&gt;3月17日 - 18日：&lt;a href=&#34;http://mdevcon.com/&#34;&gt;Mdevcon&lt;/a&gt; 荷兰，阿姆斯特丹&lt;/li&gt;
+&lt;li&gt;3月25日 - 26日：&lt;a href=&#34;http://cocoaconf.com/chicago-2016/home&#34;&gt;CocoaConf&lt;/a&gt; 美国，芝加哥&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>在iOS应用内打开PDF文件</title>
