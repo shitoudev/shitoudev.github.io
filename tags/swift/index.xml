@@ -7,7 +7,32 @@
     <language>en-us</language>
     
     
-    <updated>Thu, 28 Jan 2016 12:37:22 CST</updated>
+    <updated>Fri, 11 Mar 2016 17:20:14 CST</updated>
+    
+    <item>
+      <title>Swift: 避免 C 样式的循环</title>
+      <link>http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</link>
+      <pubDate>Fri, 11 Mar 2016 17:20:14 CST</pubDate>
+      
+      <guid>http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</guid>
+      <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/avoiding-c-style-for-loops/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0007-remove-c-style-for-loops.md&#34;&gt;C样式的循环将会在 Swift 3 中被移除&lt;/a&gt;。一开始似乎有点奇怪，但是 Swift 提供了更好的循环结构。&lt;/p&gt;
+
+&lt;h4 id=&#34;c样式的循环:b8bcb7b51e839cbb3588711f19cf4d33&#34;&gt;C样式的循环&lt;/h4&gt;
+
+&lt;p&gt;让我们先来看看C样式的循环：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let programmingLanguages = [&amp;quot;Swift&amp;quot;,&amp;quot;Objective-C&amp;quot;,&amp;quot;Java&amp;quot;]
+
+for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
+    print(&amp;quot;index: \(i), value: \(programmingLanguages[i])&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这段代码运行没问题，但是它既不好用也不够 “swifty”。实际上，它不太容易学习和记忆。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>如何在一个iOS项目中使用 Objective-C 和 Swift</title>

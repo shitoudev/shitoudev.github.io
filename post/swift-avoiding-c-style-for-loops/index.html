@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Swift: 避免 C 样式的循环 - Zephan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="http://shitoudev.github.io/css/combined-min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://shitoudev.github.io" class="site-title">Zephan</a>
+      <nav class="site-nav right">
+      <a href="http://shitoudev.github.io/about">About</a>
+<a href="http://shitoudev.github.io/tags">Tags</a>
+
+<a href="http://shitoudev.github.io/books">Books</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Swift: 避免 C 样式的循环</h1>
+        <span class="post-meta">Mar 11, 2016, 5:20pm by </span><br>
+        
+      </div>
+
+      <article class="post-content">
+      
+
+<p>作者：Thomas Hanning <a href="http://www.thomashanning.com/avoiding-c-style-for-loops/">原文链接</a></p>
+
+<p><a href="https://github.com/apple/swift-evolution/blob/master/proposals/0007-remove-c-style-for-loops.md">C样式的循环将会在 Swift 3 中被移除</a>。一开始似乎有点奇怪，但是 Swift 提供了更好的循环结构。</p>
+
+<h4 id="c样式的循环:b8bcb7b51e839cbb3588711f19cf4d33">C样式的循环</h4>
+
+<p>让我们先来看看C样式的循环：</p>
+
+<pre><code>let programmingLanguages = [&quot;Swift&quot;,&quot;Objective-C&quot;,&quot;Java&quot;]
+
+for var i = 0; i &lt; programmingLanguages.count; i++ {
+    print(&quot;index: \(i), value: \(programmingLanguages[i])&quot;)
+}
+</code></pre>
+
+<p>这段代码运行没问题，但是它既不好用也不够 “swifty”。实际上，它不太容易学习和记忆。</p>
+
+<h4 id="for-in-循环:b8bcb7b51e839cbb3588711f19cf4d33">For-in 循环</h4>
+
+<p><code>for-in</code> 循环提供了足够多功能来实现同样的目的。不过我们还是先来看看一个简单的版本：</p>
+
+<pre><code>for language in programmingLanguages {
+    print(&quot;value: \(language)&quot;)
+}
+</code></pre>
+
+<p>同样可以运行，但是有个小问题：你没法访问索引。某些情况下这已经足够了，但是有些时候你确实需要索引。没问题，我们可以通过使用 <code>元祖</code> 和 <code>enumerate()</code> 方法来解决：</p>
+
+<pre><code>for (index,language) in programmingLanguages.enumerate() {
+    print(&quot;index: \(index), value: \(language)&quot;)
+}
+</code></pre>
+
+<p>我们要的都有了。而且我觉得这个比C样式的循环更加易读。</p>
+
+<p>还有字典呢？也很简单。</p>
+
+<pre><code>let plattformLanguages = [&quot;Android&quot;:&quot;Java&quot;,&quot;iOS&quot;:&quot;Swift&quot;]
+
+for (key,value) in plattformLanguages {
+    print(&quot;key: \(key), value:\(value)&quot;)
+}
+</code></pre>
+
+<p>这里我们甚至不需要访问字典里面的函数。直接使用 <code>for-in</code> 和 <code>元祖</code> 来实现。</p>
+
+<h4 id="swift-3:b8bcb7b51e839cbb3588711f19cf4d33">Swift 3</h4>
+
+<p>当然你仍然可以去争论在 Swift 3 中移除C样式的循环是否是一个好的想法。一方面你需要重写现有的代码而且只有 <code>for-in</code> 一个选择，但是另一方面这会强制开发者使用一个循环样式，所以我认为这是不错的改变。</p>
+
+<p>你呢？你觉得在 Swift 3 中移除C样式的循环是一个好的想法吗？欢迎在下面评论！</p>
+
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+            
+            <a href="http://shitoudev.github.io/tags/swift">swift</a>
+        
+      </p>
+
+      
+<div id="disqus_thread">
+  <script type="text/javascript">
+     var disqus_shortname = "zephan";
+     var disqus_identifier = "\/post\/swift-avoiding-c-style-for-loops\/";
+
+     (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+  </script>
+</div>
+
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+
+<a class="fa fa-twitter" href="https://twitter.com/shitoudev"></a>
+
+
+<a class="fa fa-github" href="https://github.com/shitoudev"></a>
+
+<a class="fa fa-rss" href="http://shitoudev.github.io/index.xml"></a>
+</nav>
+
+          <small>
+            Zephan<br>
+            Copyright &#169; 2015 - 2016<br>
+            Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="http://shitoudev.github.io/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+
+</body>
+</html>
+
