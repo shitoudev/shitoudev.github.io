@@ -3,7 +3,7 @@
   <channel>
       <title>Ibinspectable on Zephan </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://shitoudev.github.io/tags/ibinspectable/</link>
+    <link>https://shitoudev.github.io/tags/ibinspectable/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>在 Swift 中的父类里面使用 IBInspectable 属性</title>
-      <link>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
+      <link>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
       <pubDate>Wed, 20 Jan 2016 12:28:30 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
+      <guid>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
       <description>&lt;p&gt;作者：Jameson Quave &lt;a href=&#34;http://jamesonquave.com/blog/adding-ibinspectable-to-a-superclass-in-swift/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;一个非常有用的功能就是在代码里面添加 IBInspectable 属性的背景图片。在一个娱乐类的应用里面，我写了一个可设计的 Cell，代码如下：&lt;/p&gt;

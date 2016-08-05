@@ -3,7 +3,7 @@
   <channel>
       <title> on Zephan </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://shitoudev.github.io/</link>
+    <link>https://shitoudev.github.io/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Swift: 避免 C 样式的循环</title>
-      <link>http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</link>
+      <link>https://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</link>
       <pubDate>Fri, 11 Mar 2016 17:20:14 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</guid>
+      <guid>https://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/avoiding-c-style-for-loops/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0007-remove-c-style-for-loops.md&#34;&gt;C样式的循环将会在 Swift 3 中被移除&lt;/a&gt;。一开始看到似乎有点奇怪，但是 Swift 提供了更好的循环结构。&lt;/p&gt;
@@ -36,10 +36,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>2016年全球与iOS开发者相关的会议</title>
-      <link>http://shitoudev.github.io/post/ios-developer-conferences-in-2016/</link>
+      <link>https://shitoudev.github.io/post/ios-developer-conferences-in-2016/</link>
       <pubDate>Wed, 24 Feb 2016 16:28:18 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/ios-developer-conferences-in-2016/</guid>
+      <guid>https://shitoudev.github.io/post/ios-developer-conferences-in-2016/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/ios-developer-conferences-in-2016/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;作为一个iOS开发者你应该去参加一些开发者大会。这是个学习新技术和结识其他开发者一个很好的机会。此外在大会中沟通交流也能锻炼自己。下面是2016年iOS开发者相关的会议列表。&lt;/em&gt;&lt;/p&gt;
@@ -57,10 +57,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>如何在一个iOS项目中使用 Objective-C 和 Swift</title>
-      <link>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
+      <link>https://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
       <pubDate>Thu, 28 Jan 2016 12:37:22 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
+      <guid>https://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/swift-and-objective-c-interoperability/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Objective-C 和 Swift 能很好的交互，所以在同一个项目中可以很容易的同时使用两者。&lt;/p&gt;
@@ -76,19 +76,19 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>Books</title>
-      <link>http://shitoudev.github.io/books/</link>
+      <link>https://shitoudev.github.io/books/</link>
       <pubDate>Wed, 27 Jan 2016 10:55:37 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/books/</guid>
+      <guid>https://shitoudev.github.io/books/</guid>
       <description>这个页面记录自己读书相关，目标很简单一个月至少一本书。 &amp;emsp;&amp;emsp;还记得上学时只看过两本小说书籍：《三国演义》、《骆驼祥子》，可能是我看的书比较少，确实很喜欢这两本书。除了这两本再也没看过一本完整的书籍（当然是除了课本啦），那会儿有打算把红楼梦看看的，名著嘛，有天然的吸引力，可是我对红楼梦确实提不起兴趣，宝玉什么的（因为没看过所以不知道里面讲什么，只是感觉不喜欢），后来也就没看了。 &amp;emsp;&amp;emsp;2013年买了两本书：《创新者的窘境》、《爱和自由》，居然到现在也没看完，真的要抽自己两下了。2015年下半年开始准备好好阅读，把 iPad 收起来，买了 kindle，不能否认 kindle 很适合沉浸式阅读，最重要它相比 iPad 或者电脑屏幕能更好的保护眼睛，看时间长眼睛也不会干涩，携带也很方便。 列表 2016年 3月份 激荡三十年 - 吴晓波 1月份 - 2月份 创业维艰 - 本∙霍洛维茨 2015年 9月份 人类简史：从动物到上帝 - 尤瓦尔·赫拉利 10月份 - 11月份 中国近代史 - 徐中约港版 12月份 说话的魅力 - 刘墉 很多年前 三国演义 - 罗贯中 骆驼祥子 - 老舍</description>
     </item>
     
     <item>
       <title>Network Link Conditioner</title>
-      <link>http://shitoudev.github.io/post/network-link-conditioner/</link>
+      <link>https://shitoudev.github.io/post/network-link-conditioner/</link>
       <pubDate>Wed, 20 Jan 2016 17:09:20 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/network-link-conditioner/</guid>
+      <guid>https://shitoudev.github.io/post/network-link-conditioner/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/network-link-conditioner/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;在这篇文章里，我们将讨论通过使用 Network Link Conditioner 来模拟网络条件不好的情况。&lt;/p&gt;
@@ -101,10 +101,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>在 Swift 中的父类里面使用 IBInspectable 属性</title>
-      <link>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
+      <link>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
       <pubDate>Wed, 20 Jan 2016 12:28:30 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
+      <guid>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
       <description>&lt;p&gt;作者：Jameson Quave &lt;a href=&#34;http://jamesonquave.com/blog/adding-ibinspectable-to-a-superclass-in-swift/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;一个非常有用的功能就是在代码里面添加 IBInspectable 属性的背景图片。在一个娱乐类的应用里面，我写了一个可设计的 Cell，代码如下：&lt;/p&gt;
@@ -128,10 +128,10 @@ class TrailerCollectionViewCell: MediaCollectionViewCell {
     
     <item>
       <title>Swift Magic: Public Getter, Private Setter</title>
-      <link>http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</link>
+      <link>https://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</link>
       <pubDate>Tue, 12 Jan 2016 11:13:59 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</guid>
+      <guid>https://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</guid>
       <description>&lt;p&gt;作者：Natasha The Robot &lt;a href=&#34;https://www.natashatherobot.com/swift-magic-public-getter-private-setter/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;在我的这篇 &lt;a href=&#34;https://www.natashatherobot.com/swift-dependency-injection-with-a-custom-initializer/&#34;&gt;Constructor Injection&lt;/a&gt; blog中，我写了一个结构体的例子，它有一个属性，属性可以从外部读取，但是写权限只能在内部，之前的代码看起来是这样的：&lt;/p&gt;
@@ -153,26 +153,26 @@ class TrailerCollectionViewCell: MediaCollectionViewCell {
     
     <item>
       <title>About</title>
-      <link>http://shitoudev.github.io/about/</link>
+      <link>https://shitoudev.github.io/about/</link>
       <pubDate>Fri, 08 Jan 2016 11:54:41 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/about/</guid>
+      <guid>https://shitoudev.github.io/about/</guid>
       <description>很喜欢这张和我儿子的照片 87年来自湖南株洲在上海拼搏的人！ 虽然还没找到归属感，不过这又怎样呢，归属感都是自己YY出来的，找到自己喜欢的事、找到自己的价值所在，为自己和家庭的未来奋斗吧！ 喜欢曼联、喜欢跑步（膝盖受伤之后没有坚持下去，2016年再战），再有就是16年开始要游泳，为了我的腰间盘不再回来。 认真对待生活！</description>
     </item>
     
     <item>
       <title>在iOS应用内打开PDF文件</title>
-      <link>http://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</link>
+      <link>https://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</link>
       <pubDate>Thu, 07 Jan 2016 17:13:17 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</guid>
       <description>&lt;p&gt;&amp;emsp;&amp;emsp;作者：Arthur Knopper &lt;a href=&#34;http://www.ioscreator.com/tutorials/open-pdf-tutorial&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;在iOS应用内显示PDF文件内容可以使用Web View来解决，这篇文章将从本地读取PDF文件并显示到屏幕上。教程的代码使用Xcode7.1、iOS9编译运行。&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;打开Xcode新建一个新的名字为“IOS9OpenPDFTutorial”的项目，语言选择Swift，设备选择iPhone，其他随意。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://shitoudev.github.io/images/openpdf/download.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://shitoudev.github.io/images/openpdf/download.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

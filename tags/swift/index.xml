@@ -3,7 +3,7 @@
   <channel>
       <title>Swift on Zephan </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://shitoudev.github.io/tags/swift/</link>
+    <link>https://shitoudev.github.io/tags/swift/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Swift: 避免 C 样式的循环</title>
-      <link>http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</link>
+      <link>https://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</link>
       <pubDate>Fri, 11 Mar 2016 17:20:14 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</guid>
+      <guid>https://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/avoiding-c-style-for-loops/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0007-remove-c-style-for-loops.md&#34;&gt;C样式的循环将会在 Swift 3 中被移除&lt;/a&gt;。一开始看到似乎有点奇怪，但是 Swift 提供了更好的循环结构。&lt;/p&gt;
@@ -36,10 +36,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>如何在一个iOS项目中使用 Objective-C 和 Swift</title>
-      <link>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
+      <link>https://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
       <pubDate>Thu, 28 Jan 2016 12:37:22 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
+      <guid>https://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/swift-and-objective-c-interoperability/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Objective-C 和 Swift 能很好的交互，所以在同一个项目中可以很容易的同时使用两者。&lt;/p&gt;
@@ -55,10 +55,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>在 Swift 中的父类里面使用 IBInspectable 属性</title>
-      <link>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
+      <link>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
       <pubDate>Wed, 20 Jan 2016 12:28:30 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
+      <guid>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
       <description>&lt;p&gt;作者：Jameson Quave &lt;a href=&#34;http://jamesonquave.com/blog/adding-ibinspectable-to-a-superclass-in-swift/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;一个非常有用的功能就是在代码里面添加 IBInspectable 属性的背景图片。在一个娱乐类的应用里面，我写了一个可设计的 Cell，代码如下：&lt;/p&gt;
@@ -82,10 +82,10 @@ class TrailerCollectionViewCell: MediaCollectionViewCell {
     
     <item>
       <title>Swift Magic: Public Getter, Private Setter</title>
-      <link>http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</link>
+      <link>https://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</link>
       <pubDate>Tue, 12 Jan 2016 11:13:59 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</guid>
+      <guid>https://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</guid>
       <description>&lt;p&gt;作者：Natasha The Robot &lt;a href=&#34;https://www.natashatherobot.com/swift-magic-public-getter-private-setter/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;在我的这篇 &lt;a href=&#34;https://www.natashatherobot.com/swift-dependency-injection-with-a-custom-initializer/&#34;&gt;Constructor Injection&lt;/a&gt; blog中，我写了一个结构体的例子，它有一个属性，属性可以从外部读取，但是写权限只能在内部，之前的代码看起来是这样的：&lt;/p&gt;

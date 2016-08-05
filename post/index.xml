@@ -3,7 +3,7 @@
   <channel>
       <title>Posts on Zephan </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://shitoudev.github.io/post/</link>
+    <link>https://shitoudev.github.io/post/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Swift: 避免 C 样式的循环</title>
-      <link>http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</link>
+      <link>https://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</link>
       <pubDate>Fri, 11 Mar 2016 17:20:14 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</guid>
+      <guid>https://shitoudev.github.io/post/swift-avoiding-c-style-for-loops/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/avoiding-c-style-for-loops/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0007-remove-c-style-for-loops.md&#34;&gt;C样式的循环将会在 Swift 3 中被移除&lt;/a&gt;。一开始看到似乎有点奇怪，但是 Swift 提供了更好的循环结构。&lt;/p&gt;
@@ -36,10 +36,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>2016年全球与iOS开发者相关的会议</title>
-      <link>http://shitoudev.github.io/post/ios-developer-conferences-in-2016/</link>
+      <link>https://shitoudev.github.io/post/ios-developer-conferences-in-2016/</link>
       <pubDate>Wed, 24 Feb 2016 16:28:18 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/ios-developer-conferences-in-2016/</guid>
+      <guid>https://shitoudev.github.io/post/ios-developer-conferences-in-2016/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/ios-developer-conferences-in-2016/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;作为一个iOS开发者你应该去参加一些开发者大会。这是个学习新技术和结识其他开发者一个很好的机会。此外在大会中沟通交流也能锻炼自己。下面是2016年iOS开发者相关的会议列表。&lt;/em&gt;&lt;/p&gt;
@@ -57,10 +57,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>如何在一个iOS项目中使用 Objective-C 和 Swift</title>
-      <link>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
+      <link>https://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
       <pubDate>Thu, 28 Jan 2016 12:37:22 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
+      <guid>https://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/swift-and-objective-c-interoperability/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Objective-C 和 Swift 能很好的交互，所以在同一个项目中可以很容易的同时使用两者。&lt;/p&gt;
@@ -76,10 +76,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>Network Link Conditioner</title>
-      <link>http://shitoudev.github.io/post/network-link-conditioner/</link>
+      <link>https://shitoudev.github.io/post/network-link-conditioner/</link>
       <pubDate>Wed, 20 Jan 2016 17:09:20 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/network-link-conditioner/</guid>
+      <guid>https://shitoudev.github.io/post/network-link-conditioner/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/network-link-conditioner/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;在这篇文章里，我们将讨论通过使用 Network Link Conditioner 来模拟网络条件不好的情况。&lt;/p&gt;
@@ -92,10 +92,10 @@ for var i = 0; i &amp;lt; programmingLanguages.count; i++ {
     
     <item>
       <title>在 Swift 中的父类里面使用 IBInspectable 属性</title>
-      <link>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
+      <link>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
       <pubDate>Wed, 20 Jan 2016 12:28:30 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
+      <guid>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
       <description>&lt;p&gt;作者：Jameson Quave &lt;a href=&#34;http://jamesonquave.com/blog/adding-ibinspectable-to-a-superclass-in-swift/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;一个非常有用的功能就是在代码里面添加 IBInspectable 属性的背景图片。在一个娱乐类的应用里面，我写了一个可设计的 Cell，代码如下：&lt;/p&gt;
@@ -119,10 +119,10 @@ class TrailerCollectionViewCell: MediaCollectionViewCell {
     
     <item>
       <title>Swift Magic: Public Getter, Private Setter</title>
-      <link>http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</link>
+      <link>https://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</link>
       <pubDate>Tue, 12 Jan 2016 11:13:59 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</guid>
+      <guid>https://shitoudev.github.io/post/swift-magic-public-getter-private-setter/</guid>
       <description>&lt;p&gt;作者：Natasha The Robot &lt;a href=&#34;https://www.natashatherobot.com/swift-magic-public-getter-private-setter/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;在我的这篇 &lt;a href=&#34;https://www.natashatherobot.com/swift-dependency-injection-with-a-custom-initializer/&#34;&gt;Constructor Injection&lt;/a&gt; blog中，我写了一个结构体的例子，它有一个属性，属性可以从外部读取，但是写权限只能在内部，之前的代码看起来是这样的：&lt;/p&gt;
@@ -144,17 +144,17 @@ class TrailerCollectionViewCell: MediaCollectionViewCell {
     
     <item>
       <title>在iOS应用内打开PDF文件</title>
-      <link>http://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</link>
+      <link>https://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</link>
       <pubDate>Thu, 07 Jan 2016 17:13:17 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://shitoudev.github.io/post/%E5%9C%A8iOS%E5%BA%94%E7%94%A8%E5%86%85%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6/</guid>
       <description>&lt;p&gt;&amp;emsp;&amp;emsp;作者：Arthur Knopper &lt;a href=&#34;http://www.ioscreator.com/tutorials/open-pdf-tutorial&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;在iOS应用内显示PDF文件内容可以使用Web View来解决，这篇文章将从本地读取PDF文件并显示到屏幕上。教程的代码使用Xcode7.1、iOS9编译运行。&lt;/p&gt;
 
 &lt;p&gt;&amp;emsp;&amp;emsp;打开Xcode新建一个新的名字为“IOS9OpenPDFTutorial”的项目，语言选择Swift，设备选择iPhone，其他随意。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://shitoudev.github.io/images/openpdf/download.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://shitoudev.github.io/images/openpdf/download.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

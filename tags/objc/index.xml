@@ -3,7 +3,7 @@
   <channel>
       <title>Objc on Zephan </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://shitoudev.github.io/tags/objc/</link>
+    <link>https://shitoudev.github.io/tags/objc/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>如何在一个iOS项目中使用 Objective-C 和 Swift</title>
-      <link>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
+      <link>https://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</link>
       <pubDate>Thu, 28 Jan 2016 12:37:22 CST</pubDate>
       
-      <guid>http://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
+      <guid>https://shitoudev.github.io/post/how-to-use-both-swift-and-objective-c-in-one-project/</guid>
       <description>&lt;p&gt;作者：Thomas Hanning &lt;a href=&#34;http://www.thomashanning.com/swift-and-objective-c-interoperability/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Objective-C 和 Swift 能很好的交互，所以在同一个项目中可以很容易的同时使用两者。&lt;/p&gt;
