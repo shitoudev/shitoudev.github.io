@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Ibinspectable on Zephan </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>IBInspectable on Zephan</title>
     <link>https://shitoudev.github.io/tags/ibinspectable/</link>
+    <description>Recent content in IBInspectable on Zephan</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 20 Jan 2016 12:28:30 +0800</lastBuildDate>
     
+	<atom:link href="https://shitoudev.github.io/tags/ibinspectable/index.xml" rel="self" type="application/rss+xml" />
     
-    <updated>Wed, 20 Jan 2016 12:28:30 CST</updated>
     
     <item>
       <title>在 Swift 中的父类里面使用 IBInspectable 属性</title>
       <link>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</link>
-      <pubDate>Wed, 20 Jan 2016 12:28:30 CST</pubDate>
+      <pubDate>Wed, 20 Jan 2016 12:28:30 +0800</pubDate>
       
       <guid>https://shitoudev.github.io/post/adding-ibinspectable-to-a-superclass-in-swift/</guid>
       <description>&lt;p&gt;作者：Jameson Quave &lt;a href=&#34;http://jamesonquave.com/blog/adding-ibinspectable-to-a-superclass-in-swift/&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
@@ -32,10 +34,8 @@ class TrailerCollectionViewCell: MediaCollectionViewCell {
         }
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>
 </rss>
-
