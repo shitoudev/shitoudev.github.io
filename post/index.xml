@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Zephan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Mar 2016 17:20:14 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 15:20:14 +0800</lastBuildDate>
     
 	<atom:link href="https://shitoudev.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>通过 Yii 框架从数据库导出大批量数据</title>
+      <link>https://shitoudev.github.io/post/php/yii2-export-large-data/</link>
+      <pubDate>Wed, 20 Nov 2019 15:20:14 +0800</pubDate>
+      
+      <guid>https://shitoudev.github.io/post/php/yii2-export-large-data/</guid>
+      <description>&lt;p&gt;最近有客户想一次性把客户的客资数据导出备份，经过几年的使用，很多客户的客资量都接近百万，如果要一次性导出这么多量，就不能直接从数据库读取放到数组里面，一个是 php 默认会限制内存使用量，另外内存也不应该浪费在这个上面。&lt;/p&gt;
+
+&lt;p&gt;Yii 框架提供了 &lt;code&gt;BatchQueryResult&lt;/code&gt; 对象，该对象实现了 &lt;code&gt;Iterator&lt;/code&gt; 接口，这样从数据库获取数据不会受限于内存，影响系统的稳定了。&lt;/p&gt;
+
+&lt;p&gt;环境说明：PHP 7.2&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Swift: 避免 C 样式的循环</title>

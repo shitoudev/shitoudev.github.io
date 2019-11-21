@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>通过 Yii 框架从数据库导出大批量数据 - Zephan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://shitoudev.github.io/post/php/yii2-export-large-data/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://shitoudev.github.io/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://shitoudev.github.io/tipuesearch/tipuesearch.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <div class="left">
+        <a href="https://shitoudev.github.io" class="site-title">Zephan</a>
+        <div><span style="font-size:12px; color:#999">分享即学习</span></div>
+      </div>
+      <nav class="site-nav right">
+      <a href="https://shitoudev.github.io/about/">About</a>
+<a href="https://shitoudev.github.io/tags/">Tags</a>
+
+<a href="https://shitoudev.github.io/books/">Books</a>
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h4 class="py2">通过 Yii 框架从数据库导出大批量数据</h1>
+        <span class="post-meta">Nov 20, 2019 by zephan</span><br>
+        
+      </div>
+
+      <article class="post-content">
+      <p>最近有客户想一次性把客户的客资数据导出备份，经过几年的使用，很多客户的客资量都接近百万，如果要一次性导出这么多量，就不能直接从数据库读取放到数组里面，一个是 php 默认会限制内存使用量，另外内存也不应该浪费在这个上面。</p>
+
+<p>Yii 框架提供了 <code>BatchQueryResult</code> 对象，该对象实现了 <code>Iterator</code> 接口，这样从数据库获取数据不会受限于内存，影响系统的稳定了。</p>
+
+<p>环境说明：PHP 7.2</p>
+
+<pre><code class="language-php">$unbufferedDb = new \yii\db\Connection([
+    'dsn' =&gt; Yii::$app-&gt;pc-&gt;dsn,
+    'username' =&gt; Yii::$app-&gt;pc-&gt;username,
+    'password' =&gt; Yii::$app-&gt;pc-&gt;password,
+    'charset' =&gt; Yii::$app-&gt;pc-&gt;charset,
+]);
+$unbufferedDb-&gt;open();
+$unbufferedDb-&gt;pdo-&gt;setAttribute(\PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
+
+$query = Leads::find()-&gt;all();
+foreach ($query-&gt;each(50, $unbufferedDb) as $item) {
+    // 这里就可以一个个处理数据（还原中文显示，其他关联的数据）并写入文件中
+}
+</code></pre>
+
+<p>每次遍历 50 个客资进行处理，关于 <code>$unbufferedDb</code> ，Yii <a href="https://www.yiiframework.com/doc/guide/2.0/zh-cn/db-query-builder">官方文档</a>也有说明(p1)，测试下来把 <code>MYSQL_ATTR_USE_BUFFERED_QUERY</code> 设置为 <code>false</code>，内存使用量才是正常的。</p>
+
+<p>[图片：p1]
+<img src="https://shitoudev.github.io/images/post/201911/1574321042963.jpg" alt="p-1" /></p>
+
+<p>[图片：p2]
+<img src="https://shitoudev.github.io/images/post/201911/1574321965910.jpg" alt="p-2" /></p>
+
+<p>[图片：p3]
+<img src="https://shitoudev.github.io/images/post/201911/1574322110277.jpg" alt="p-2" /></p>
+
+<p>图片 p2 和 p3 分别是导出时的进程，<code>MYSQL_ATTR_USE_BUFFERED_QUERY</code> 分别为 <code>false</code> 和 <code>true</code>，通过 <code>memory_get_usage</code> 函数内存占用基本相同，但看进程内存占用是不一样的，一个 0.5%、一个 6%。</p>
+
+<p>Yii 文档里面提到的 <code>libmysqlclient</code> 库，<a href="https://www.php.net/manual/en/mysqlinfo.library.choosing.php">php 5.4 之后编译时默认改成了</a> <code>mysqlnd</code>。</p>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+            
+            <a href="https://shitoudev.github.io/tags/yii">Yii</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+<a class="fa fa-rss rss" href="https://shitoudev.github.io/index.xml"></a>
+
+<a class="fa fa-twitter twitter" href="https://twitter.com/shitoudev"></a>
+
+</nav>
+
+          <small>
+            Copyright &#169; 2017<br>
+            Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a> &amp; <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="https://shitoudev.github.io/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+
+</body>
+</html>
+
